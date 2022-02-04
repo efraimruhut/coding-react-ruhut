@@ -1,0 +1,15 @@
+import React from "react";
+import Picture from "./picpic.png";
+
+class Comp3 extends React.Component {
+  render() {
+    console.log("image appears...");
+    return (
+      <div>
+        <img src={Picture} style={{ maxWidth: 150 }}></img>
+      </div>
+    );
+  }
+}
+
+export default Comp3;

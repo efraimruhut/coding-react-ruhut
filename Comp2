@@ -1,0 +1,38 @@
+import React from "react";
+import Comp3 from "./Comp3";
+
+interface IState {
+  counter: any;
+}
+
+class Comp2 extends React.Components<any, IState> {
+  constructor(props: any) {
+    super(props);
+
+    this.state = {
+      counter: 0,
+    };
+  }
+
+  handleEventClick: any = () => {
+    console.log("button clicked...");
+    this.setState({
+      counter: this.state.counter + 1,
+    });
+  };
+
+  render() {
+    console.log("render component 2 called...");
+    return (
+      <div>
+        <h1>{this.state.counter}</h1>
+        <button type="button" onClick={this.handleEventClick}>
+          click me
+        </button>
+        <div>{this.state.counter % 3 == 0 && this.state.counter !== 0 ? <Comp3 /> : null}</div>
+      </div>
+    );
+  }
+}
+
+export default Component2;

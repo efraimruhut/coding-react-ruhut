@@ -1,0 +1,23 @@
+import React from "react";
+
+interface IProps {
+  nama: string;
+  umur: number;
+  kelas: string;
+  siang: boolean;
+}
+
+class Comp1 extends React.Components<IProps> {
+  render() {
+    return (
+      <div>
+        <h3>Name: {this.props.nama}</h3>
+        <h3>Age: {this.props.umur}</h3>
+        <h3>Class: {this.props.kelas}</h3>
+        <h3>Coding siang {this.props.siang}</h3>
+      </div>
+    );
+  }
+}
+
+export default Component1;
